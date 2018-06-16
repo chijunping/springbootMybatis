@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cjp.springboot.mapper.EmployeeMapper">
+
+
+    <select id="getEmpById" resultType="com.cjp.springboot.entity.Employee">
+        SELECT * from Employee WHERE id=#{id}
+    </select>
+    <insert id="insertEmp">
+
+        INSERT  into Employee(id,lastName,email,gender,d_id) VALUES (#{id},#{lastName},#{email},#{gender},#{d_id})
+    </insert>
+</mapper>
